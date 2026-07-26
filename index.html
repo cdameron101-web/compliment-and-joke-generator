@@ -14,21 +14,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="card" role="main">
+    <div class="card-actions" aria-label="Compliment actions">
+      <button id="favorite-btn" class="icon-btn" type="button" aria-pressed="false" aria-label="Favorite this compliment">♡ Favorite</button>
+      <button id="copy-btn" class="icon-btn" type="button" aria-label="Copy this compliment">Copy</button>
+      <button id="share-btn" class="icon-btn" type="button" aria-label="Share this compliment">Share</button>
+    </div>
 
-  <!-- Main container centered on the page -->
-  <main class="card">
     <div class="quote-icon">“</div>
-    
-    <!-- Display area for the random compliment -->
-    <p id="compliment-text" class="compliment-text">
+
+    <p id="compliment-text" class="compliment-text" aria-live="polite">
       Click the button below to receive your compliment!
     </p>
 
-    <!-- Trigger button to generate new compliments -->
-    <button id="generate-btn" class="btn">Get a New Compliment</button>
+    <div class="button-row">
+      <button id="generate-btn" class="btn" type="button">Get a New Compliment</button>
+      <button id="favorites-toggle-btn" class="btn btn--secondary" type="button">View Favorites</button>
+    </div>
+
+    <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
   </main>
 
-  <!-- Link to external JavaScript file -->
+  <section id="favorites-panel" class="favorites-panel" aria-hidden="true">
+    <div class="favorites-panel__backdrop" data-close="true"></div>
+    <div class="favorites-panel__content" role="dialog" aria-modal="true" aria-labelledby="favorites-title">
+      <div class="favorites-panel__header">
+        <h2 id="favorites-title">Saved Favorites</h2>
+        <button id="close-favorites-btn" class="icon-btn" type="button" aria-label="Close favorites">Close</button>
+      </div>
+      <ul id="favorites-list" class="favorites-list"></ul>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
