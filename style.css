@@ -58,12 +58,20 @@ body {
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.6;
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0 0.75rem 0;
   min-height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity 0.3s ease;
+}
+
+.punchline-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6C757D;
+  margin-bottom: 1.2rem;
+  min-height: 1.5rem;
 }
 
 .fade-out {
@@ -121,6 +129,30 @@ body {
 
 .icon-btn.is-active {
   background-color: #FF6B6B;
+  color: #FFFFFF;
+}
+
+.mode-switch {
+  display: inline-flex;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  background: #F8F9FA;
+  border-radius: 999px;
+}
+
+.mode-btn {
+  background: transparent;
+  color: #6C757D;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mode-btn.is-active {
+  background: #FF6B6B;
   color: #FFFFFF;
 }
 

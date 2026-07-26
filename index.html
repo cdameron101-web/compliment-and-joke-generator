@@ -15,20 +15,26 @@
 </head>
 <body>
   <main class="card" role="main">
-    <div class="card-actions" aria-label="Compliment actions">
-      <button id="favorite-btn" class="icon-btn" type="button" aria-pressed="false" aria-label="Favorite this compliment">♡ Favorite</button>
-      <button id="copy-btn" class="icon-btn" type="button" aria-label="Copy this compliment">Copy</button>
-      <button id="share-btn" class="icon-btn" type="button" aria-label="Share this compliment">Share</button>
+    <div class="card-actions" aria-label="Content actions">
+      <button id="favorite-btn" class="icon-btn" type="button" aria-pressed="false" aria-label="Favorite this item">&#10084; Favorite</button>
+      <button id="copy-btn" class="icon-btn" type="button" aria-label="Copy this item">Copy</button>
+      <button id="share-btn" class="icon-btn" type="button" aria-label="Share this item">Share</button>
     </div>
 
-    <div class="quote-icon">“</div>
+    <div class="mode-switch" role="tablist" aria-label="Choose content type">
+      <button id="compliment-mode-btn" class="mode-btn is-active" type="button" data-mode="compliment">Compliments</button>
+      <button id="joke-mode-btn" class="mode-btn" type="button" data-mode="joke">Jokes</button>
+    </div>
 
-    <p id="compliment-text" class="compliment-text" aria-live="polite">
+    <div class="quote-icon">&#8220;</div>
+
+    <p id="content-text" class="compliment-text" aria-live="polite">
       Click the button below to receive your compliment!
     </p>
+    <p id="punchline-text" class="punchline-text" hidden></p>
 
     <div class="button-row">
-      <button id="generate-btn" class="btn" type="button">Get a New Compliment</button>
+      <button id="generate-btn" class="btn" type="button">Get a New One</button>
       <button id="favorites-toggle-btn" class="btn btn--secondary" type="button">View Favorites</button>
     </div>
 
